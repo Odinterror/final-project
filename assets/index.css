@@ -137,3 +137,13 @@ meter {
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+.header {
+  border: 1px solid #000;
+  background-color: blue;
+  height: 100px;
+}
+
+body {
+  background-color: yellowgreen;
+}
