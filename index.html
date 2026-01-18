@@ -1,22 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/sass.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SASS Tutorial template</title>
-    <script type="module" crossorigin src="/final-project/assets/index-875b9161.js"></script>
+    
+    <script type="module" crossorigin src="/final-project/assets/index-a80739e0.js"></script>
     <link rel="stylesheet" href="/final-project/assets/index.css">
   </head>
   <body>
     <header class="header">
       <div class="header-wrap">
-      <img class="logo" src="" alt="">
-        <nav class="header-nav container">
+        <div class="logo-wrap">
+          <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAfCAYAAACVgY94AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQJSURBVHgB7VjbVRsxEJW0ayd8xakAp4KQCnAHkApsKkioAKcCkwpsKsCugKWCmArsVIDzRdiXcu9qhbVaPzDh8OU5Z716zI6uNKPRlYUoJU2TGzzXYo2kaTzTOj1x9K+TJL709ZIk6ZS27vHoLEt+pWnardujTjxb9Wit21YvXH7CRtmO47/fm833l3WIsp1l+UenoaWUWrgaAHOhteijGOW5Pi+bO0qJEUB2wjA888abQm/ijxQEYiHqMyL6Ytb3cRwf1fsTDZ2eU7/JsnRo6w8PD23qYAX7/rflqmp3JTlekjzWdH1RbkVKOcZrGgRyKHaUIAj6sDBvNBp9vw9tXNEruO6T2FGU35Ak6RncBHcmA7GDwI3HWmdX6/qbzWZvFfhtEvoNBwcHc7j4XCk5hGsmnL14lsi2lGIudhDE8AnC5NBtQ/3O3QNq1YeY7QivMVw+hFta4g0FY1bGC9cpBkF4xhSB2LlA9VxsFT1HaByJHSTPc3joXX+TzlqAmMkCLmZaQL5KbwFAbISnxQTffF7Xj107lFIVExc7iNrUyfjDwD8x/NZdDb0RXh3mQlEDl55iyj3oRGJHCbcqhGEfg+IEkRtjEXE7LTfXADmvI6UeZ5n4Q9CA3+VEG42wssuxosercmEYNkfwxtwDKKeIiqmvTFdj4K9IIwOtzUcUbJ47gJh5IC+hGxEkdPvK+GfK1fPBmfFEiyD9MRFaY7GXvexlL28kPG83EUfSLpJTlg3xjGcuoV1H2y115ylSliuJ3hDceOaSXiuw3yMulkMe2EiW31DurwIIw6c8Z5ctBa1quXX8jNdRdxDZKMtI7zMm5CcdHKNHpP20j2rlfEai7wLXb2cmBVXv+AOY2SfaXmIsdXd1TX0zdTdeql6wsEoje7Hyx3avB4oEFW8eT7WbF2bB2UX2XHypYHVv4aUTt40MPM+zHyguwMSfQsaCxcrfFnrGQDYxrlzGCcsGtByJ/xbedQp3FvbpNRMaKmKIKRU44PMO7zZ2UQqAII0jvuGKU2cmp+5MNklJ3Yfuw+ur7QcjIjFYWPuw2SEIMiC8IzQdWfAkD4jx6Mm2aZS8h1K5uxxUdtE+eql7Xepu7VvGDdsnFgQ2C5lLCzFnQfIeXWczdgNQyW4c958EV2fXTULhigLEzHzDNOTekZMb2nAx2L4nPkj2jE7Q/MceXLAwcRBOxKuJihCHA8OuddsNHa1zbqJjA0xG5YpXARpFfWUD1o2D1xDGGxcAxQFsT6uhQ/DiAq5vZVn1bu1R/uKfBSZtbJj8i3imbKDul+5qmB2rkIT1T1fPeo8xKmVwvhYgFZFAsYryg9lhVcEKLzBgxLfTHFmQoi6V5AzvMN0clhcs3/YVbB/6fxT8A1+cALAIjFsdAAAAAElFTkSuQmCC" alt="" />
+        </div>
+        <div class="header-top">
+          <button class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav class="header-nav" id="menu">
+          <button class="close" id="close">×</button>
           <ul class="header-list">
-            <li class="header-item">
-              <a class="header-link" href="">Home</a>
-            </li>
+            <li class="header-item"><a class="header-link" href="">Home</a></li>
             <li class="header-item">
               <a class="header-link" href="">About</a>
             </li>
@@ -33,83 +42,84 @@
               <a class="header-link" href="">Contacts</a>
             </li>
           </ul>
-          <button class="header-button">Contact us</button>
         </nav>
+        <button class="header-button">Contact us</button>
       </div>
     </header>
     <main>
       <section class="view">
         <div class="container">
-          <h1 class="view-title">
-            Nice view
-          </h1>
+          <h1 class="view-title">Nice view</h1>
           <p class="view-text">For your comfortable life with your family</p>
-          <img class="group" src="" alt="">
-          <img class="girl" src="" alt="">
+          <img class="group" src="" alt="" />
+          <img class="girl" src="" alt="" />
           <button class="view-button">Contact us</button>
         </div>
       </section>
       <section class="philosophy">
         <div class="philosophy-wrap">
           <ul class="philosophy-list">
-          <li class="philosophy-item">
-            <svg class="philosophy-icon" width="" height="">
-              <use href=""></use>
-            </svg>
-            <p class="philosophy-text">15 years of experience</p>
-          </li>
-          <li class="philosophy-item">
-            <svg class="philosophy-icon" width="" height="">
-              <use href=""></use>
-            </svg>
-            <p class="philosophy-text">30 thousand happy residents</p>
-          </li>
-          <li class="philosophy-item">
-            <svg class="philosophy-icon" width="" height="">
-              <use href=""></use>
-            </svg>
-            <p class="philosophy-text">22 houses built</p>
-          </li>
-          <li class="philosophy-item">
-            <svg class="philosophy-icon" width="" height="">
-              <use href=""></use>
-            </svg>
-            <p class="philosophy-text">9 awards</p>
-          </li>
+            <li class="philosophy-item">
+              <svg class="philosophy-icon" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p class="philosophy-text">15 years of experience</p>
+            </li>
+            <li class="philosophy-item">
+              <svg class="philosophy-icon" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p class="philosophy-text">30 thousand happy residents</p>
+            </li>
+            <li class="philosophy-item">
+              <svg class="philosophy-icon" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p class="philosophy-text">22 houses built</p>
+            </li>
+            <li class="philosophy-item">
+              <svg class="philosophy-icon" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p class="philosophy-text">9 awards</p>
+            </li>
           </ul>
-        <div class="philosophy-wrap2">
-           <h2 class="philosophy-title">Philosophy of our company</h2>
-           <p class="philosophy-text2">Residential complex “Nice view” is an island of tranquility, security and comfort.
-In our project, we created the opportunity to lead a measured life in the very center of the city.</p>
+          <div class="philosophy-wrap2">
+            <h2 class="philosophy-title">Philosophy of our company</h2>
+            <p class="philosophy-text2">
+              Residential complex “Nice view” is an island of tranquility,
+              security and comfort. In our project, we created the opportunity
+              to lead a measured life in the very center of the city.
+            </p>
+          </div>
         </div>
-        </div>
-        <img class="man" src="" alt="">
+        <img class="man" src="" alt="" />
       </section>
       <section class="apartment">
         <div>
           <ul class="apartment-list">
             <li class="apartment-item">
               <button class="apartment-btn">
-                <img class="house" src="" alt="">
+                <img class="house" src="" alt="" />
                 <h2 class="apartment-title">Type 1</h2>
                 <p class="apartment-text">total area 23 meters</p>
               </button>
             </li>
             <li class="apartment-item">
               <button>
-                <img class="house" src="" alt="">
+                <img class="house" src="" alt="" />
                 <h2>Type 2</h2>
                 <p>total area 27 meters</p>
               </button>
             </li>
             <li class="apartment-item">
               <button>
-                <img class="house" src="" alt="">
+                <img class="house" src="" alt="" />
                 <h2>Type 3</h2>
                 <p>total area 31 meters</p>
               </button>
             </li>
-          </ul> 
+          </ul>
         </div>
         <button class="apartment-download">Download catalog</button>
       </section>
@@ -127,8 +137,8 @@ In our project, we created the opportunity to lead a measured life in the very c
                 <h3 class="infrastructure-title2">4 minutes walk</h3>
               </li>
               <li class="infrastructure-item">
-                <h3 class="infrastructure-title2">7 minutes </h3>
-                <p class="infrastructure">to the  nearest park</p>
+                <h3 class="infrastructure-title2">7 minutes</h3>
+                <p class="infrastructure">to the nearest park</p>
               </li>
             </ul>
           </div>
@@ -143,32 +153,31 @@ In our project, we created the opportunity to lead a measured life in the very c
         <div class="contact-wrap">
           <ul class="contact-list">
             <li class="contact-item">
-            <svg class="philosophy-icon" width="" height="">
-              <use href=""></use>
-            </svg>
-            <p class="contact-text">4517 Washington Ave</p>
+              <svg class="philosophy-icon" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p class="contact-text">4517 Washington Ave</p>
             </li>
             <li class="contact-item">
-            <svg class="philosophy-icon" width="" height="">
-              <use href=""></use>
-            </svg>
-            <p class="contact-text">willie.jennings@example.com</p>
+              <svg class="philosophy-icon" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p class="contact-text">willie.jennings@example.com</p>
             </li>
             <li class="contact-item">
-            <svg class="philosophy-icon" width="" height="">
-              <use href=""></use>
-            </svg>
-            <p class="contact-text">(+33)7 00 55 54 79</p>
+              <svg class="philosophy-icon" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p class="contact-text">(+33)7 00 55 54 79</p>
             </li>
             <button class="contact-btn">Contact us</button>
           </ul>
         </div>
       </section>
-
     </main>
     <footer class="footer">
-    <img class="logo" src="" alt="">
-    <h2 class="navigation-title">Navigation</h2>
+      <img class="logo" src="" alt="" />
+      <h2 class="navigation-title">Navigation</h2>
       <ul class="navigation">
         <li class="navigation-item">
           <a href="">Home</a>
@@ -192,7 +201,7 @@ In our project, we created the opportunity to lead a measured life in the very c
           <p>(406) 555-0120</p>
         </li>
         <li class="footer-contacts-item">
-          <p>ul. Chodkiewicza Karola 111, Chorzów </p>
+          <p>ul. Chodkiewicza Karola 111, Chorzów</p>
         </li>
         <li class="footer-contacts-item">
           <p>deanna.curtis@example.com</p>
@@ -200,41 +209,31 @@ In our project, we created the opportunity to lead a measured life in the very c
       </ul>
       <ul class="footer-icon-list">
         <li class="footer-icon">
-            <svg class="footer-icon" width="" height="">
-              <use href=""></use>
-            </svg>
+          <svg class="footer-icon" width="" height="">
+            <use href=""></use>
+          </svg>
         </li>
         <li class="footer-icon">
-            <svg class="footer-icon" width="" height="">
-              <use href=""></use>
-            </svg>
+          <svg class="footer-icon" width="" height="">
+            <use href=""></use>
+          </svg>
         </li>
         <li class="footer-icon">
-            <svg class="footer-icon" width="" height="">
-              <use href=""></use>
-            </svg>
+          <svg class="footer-icon" width="" height="">
+            <use href=""></use>
+          </svg>
         </li>
         <li class="footer-icon">
-            <svg class="footer-icon" width="" height="">
-              <use href=""></use>
-            </svg>
+          <svg class="footer-icon" width="" height="">
+            <use href=""></use>
+          </svg>
         </li>
       </ul>
-      <p class="footer-text">By using this website, you agree to the Terms of Service and Privacy Policy</p>
-    </footer> 
-  
+      <p class="footer-text">
+        By using this website, you agree to the Terms of Service and Privacy
+        Policy
+      </p>
+    </footer>
+    
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
