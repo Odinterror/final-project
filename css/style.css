@@ -8,7 +8,9 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
     - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+*:where(
+  :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+) {
   all: unset;
   display: revert;
 }
@@ -66,7 +68,7 @@ textarea {
 meter {
   -webkit-appearance: revert;
   -moz-appearance: revert;
-       appearance: revert;
+  appearance: revert;
 }
 
 /* preformatted text - use only for this feature */
@@ -97,7 +99,7 @@ meter {
 /* revert for bug in Chromium browsers
    - fix for the content editable attribute will work properly.
    - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
-:where([contenteditable]:not([contenteditable=false])) {
+:where([contenteditable]:not([contenteditable="false"])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
@@ -106,7 +108,7 @@ meter {
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable=true]) {
+:where([draggable="true"]) {
   -webkit-user-drag: element;
 }
 
@@ -203,7 +205,7 @@ meter {
     max-height: 36px;
     width: auto;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .header .burger {
     margin-left: auto;
@@ -309,4 +311,88 @@ meter {
 }
 body {
   background-color: yellowgreen;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
+
+.philosophy {
+  position: relative;
+  width: 100%;
+}
+
+
+.philosophy-bg::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #ede9e3;
+  position: relative;
+}
+
+.philosophy-bg {
+  position: relative;
+  width: 100%;
+  height: 677px;
+  opacity: 1;
+  background: url("../img/second_background.png") center/cover no-repeat;
+  z-index: 1;
+}
+
+.philosophy-man {
+  width: 150px;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  z-index: 3;
+}
+
+.philosophy-container {
+  position: relative;
+  display: flex;
+}
+
+.philosophy-card-bg {
+  background: #fff;
+  opacity: 0.9;
+  z-index: 1;
+  width: auto;
+}
+
+.philosophy-card {
+  width: auto;            
+  max-width: 90%;         
+  min-width: 280px;    
+  margin: 0 auto;                  
+  border-radius: 16px;
+  box-sizing: border-box; 
+
+}
+
+
+.philosophy-card-content {
+  z-index: 2;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.philosophy-title {
+  line-height: 1.4;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.philosophy-text2 {
+  line-height: 1.4;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* desktop */
+@media (min-width: 1025px) {
+}
+
+/* mobile */
+@media (min-width: 768px) {
+}
