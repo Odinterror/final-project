@@ -393,8 +393,7 @@ body {
      -moz-box-orient: vertical;
      -moz-box-direction: normal;
           flex-direction: column;
-  gap: 22git branch
-px;
+  gap: 22px;
 }
 .philosophy-icon {
   width: 32px;
