@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 /***
     The new CSS reset - version 1.11 (last updated 20.9.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -316,81 +317,124 @@ body {
 .philosophy {
   position: relative;
   width: 100%;
+  background: #f1ede7;
 }
-
 
 .philosophy-bg::before {
   content: "";
   display: block;
-  width: 100%;
   height: 10px;
   background: #ede9e3;
-  position: relative;
 }
 
 .philosophy-bg {
   position: relative;
   width: 100%;
-  height: 677px;
+  min-height: 680px;
   opacity: 1;
-  background: url("../img/second_background.png") center/cover no-repeat;
+  background-image: url("../img/man.svg"), url("../img/second_background.png");
+  background-position: right 6% bottom 8%, 45% center;
+  background-size: 180px auto, cover;
+  background-repeat: no-repeat, no-repeat;
   z-index: 1;
-}
-
-.philosophy-man {
-  width: 150px;
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-  z-index: 3;
 }
 
 .philosophy-container {
   position: relative;
   display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 72px;
+  max-width: none;
+  margin: 0;
+}
+
+
+.philosophy-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
 }
 
 .philosophy-card-bg {
-  background: #fff;
-  opacity: 0.9;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0;   
   z-index: 1;
-  width: auto;
+  padding-bottom: 16px;
 }
 
 .philosophy-card {
-  width: auto;            
-  max-width: 90%;         
-  min-width: 280px;    
-  margin: 0 auto;                  
-  border-radius: 16px;
-  box-sizing: border-box; 
+  width: 100%;
+  max-width: none;
+  min-width: 280px;
+  margin: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 
 }
 
 
 .philosophy-card-content {
   z-index: 2;
-  padding: 32px;
+  padding: 30px 26px 34px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0;
 }
 
+.philosophy-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 28px;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.philosophy-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.philosophy-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.85;
+}
+
+.philosophy-text {
+  font-size: 15px;
+  line-height: 1.3;
+  color: #6b5e4e;
+}
 
 .philosophy-title {
-  line-height: 1.4;
-  margin-top: 20px;
-  font-size: 24px;
+  line-height: 1.25;
+  margin-top: 18px;
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #2f2a23;
+  font-family: "Poppins", sans-serif;
 }
 
 .philosophy-text2 {
-  line-height: 1.4;
-  margin-top: 10px;
-  font-size: 16px;
+  line-height: 1.45;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #7e6d53;
 }
 
 /* desktop */
 @media (min-width: 1025px) {
+  .philosophy-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* mobile */
