@@ -39,7 +39,6 @@
     fetch(link.href, fetchOpts);
   }
 })();
-const style$1 = "";
 const style = "";
 const burger = document.getElementById("burger");
 const menu = document.getElementById("menu");
