@@ -1,8 +1,9 @@
-@use "reset";
+@use "reset.scss";
 @use "vars";
 @use "global";
-@use "./layout/header";
+@use "layout/header";
+@use "layout/view";
 
-body{
-    background-color: yellowgreen;
-}
+// body{
+//     background-color: yellowgreen;
+// }
