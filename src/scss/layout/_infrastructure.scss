@@ -1,0 +1,134 @@
+.infrastructure {
+  padding: 60px 0;
+  background-color: #f5f1ea;
+
+  &-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  &-bg {
+    background-image: url("/src/img/Infrastructure-mobile.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10 40px;
+  }
+
+  &-overlay {
+    width: calc(100% - 32px);
+    background: rgba(255, 255, 255, 0.85);
+    opacity: 80%;
+    border-radius: 16px;
+  }
+
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  &-circle {
+    width: 72px;
+    height: 72px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-text {
+    font-size: 13px;
+  }
+}
+// TABLET
+@media (min-width: 768px) {
+  .infrastructure {
+    &-bg {
+      background-image: url("/src/img/Infrastructure-tablet.png");
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10 40px;
+    }
+    &-list {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    &-item {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+}
+// DESKTOP
+@media (min-width: 1200px) {
+  .infrastructure {
+    padding: 100px 0;
+
+    &-title {
+      font-size: 42px;
+      margin-bottom: 40px;
+    }
+
+    &-bg {
+      min-height: 420px;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 40px;
+    }
+
+    &-overlay {
+      width: 320px;
+      padding: 32px;
+    }
+
+    &-list {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    &-item {
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      gap: 16px;
+    }
+
+    &-circle {
+      width: 90px;
+      height: 90px;
+      font-size: 14px;
+    }
+
+    &-text {
+      font-size: 16px;
+    }
+  }
+}
