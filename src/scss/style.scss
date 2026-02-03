@@ -4,6 +4,8 @@
 @use "layout/header";
 @use "layout/view";
 @use "layout/infrastructure";
-@use "layout/philosophy"; // body{
+@use "layout/philosophy"; 
+@use "./layout/apartment"; 
+// body{
 //     background-color: yellowgreen;
 // }
