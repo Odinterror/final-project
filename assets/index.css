@@ -660,6 +660,152 @@ meter {
   text-align: center;
 }
 
+.gallery {
+  background: #f1ede7;
+  padding: 60px 0 80px;
+}
+.gallery-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.gallery-title {
+  font-size: 28px;
+  color: #6b5e4e;
+  margin-bottom: 28px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.gallery-slider {
+  position: relative;
+  min-height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+}
+.gallery-track {
+  position: relative;
+  width: min(560px, 92vw);
+  height: 280px;
+  overflow: visible;
+}
+.gallery-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 160px;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+  transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+  -moz-transition: transform 0.4s ease, opacity 0.4s ease, -moz-transform 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease, -moz-transform 0.4s ease;
+}
+.gallery-slide.is-active {
+  width: 240px;
+  height: 180px;
+  opacity: 1;
+  z-index: 3;
+}
+.gallery-slide.is-prev {
+  -webkit-transform: translate(-185%, -50%);
+     -moz-transform: translate(-185%, -50%);
+      -ms-transform: translate(-185%, -50%);
+          transform: translate(-185%, -50%);
+  z-index: 2;
+}
+.gallery-slide.is-next {
+  -webkit-transform: translate(85%, -50%);
+     -moz-transform: translate(85%, -50%);
+      -ms-transform: translate(85%, -50%);
+          transform: translate(85%, -50%);
+  z-index: 2;
+}
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+.gallery-slide.is-active .gallery-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  color: #000;
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  background: transparent;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 5;
+}
+.gallery-arrow--left {
+  left: 0;
+}
+.gallery-arrow--right {
+  right: 0;
+}
+.gallery-dots {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #c8beb0;
+  cursor: pointer;
+}
+.gallery-dot.is-active {
+  background: #6b5e4e;
+}
 @media (min-width: 768px){
   .header .header-button {
     display: none;
@@ -862,14 +1008,55 @@ meter {
   .philosophy-text2 {
     margin-top: 4px;
   }
+  .gallery-slider {
+    min-height: 360px;
+    padding: 0 20px;
+  }
+  .gallery-track {
+    width: min(780px, 74vw);
+    height: 360px;
+  }
+  .gallery-slide {
+    width: 220px;
+    height: 280px;
+  }
+  .gallery-slide.is-active {
+    width: 360px;
+    height: 260px;
+  }
+  .gallery-slide.is-prev {
+    -webkit-transform: translate(-170%, -50%);
+       -moz-transform: translate(-170%, -50%);
+        -ms-transform: translate(-170%, -50%);
+            transform: translate(-170%, -50%);
+  }
+  .gallery-slide.is-next {
+    -webkit-transform: translate(70%, -50%);
+       -moz-transform: translate(70%, -50%);
+        -ms-transform: translate(70%, -50%);
+            transform: translate(70%, -50%);
+  }
+  .gallery-arrow {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+  }
+  .gallery-arrow--left {
+    left: 0;
+  }
+  .gallery-arrow--right {
+    right: 0;
+  }
+  .gallery-dots {
+    bottom: -24px;
+  }
 }
-
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min--moz-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx){
   .philosophy-bg {
     background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_tablet_bg@2X.png");
   }
 }
-
 @media screen and (min-width: 768px){
   .view {
     background-image: url(src/img/group.svg), url(src/img/girl.svg), url(src/img/view-bg-tablet.png);
@@ -893,7 +1080,57 @@ meter {
     height: 54px;
   }
 }
-
+@media (min-width: 1024px){
+  .gallery-slider {
+    min-height: 420px;
+    width: 100vw;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 0 28px;
+  }
+  .gallery-track {
+    width: min(1200px, 92vw);
+    height: 660px;
+  }
+  .gallery-slide {
+    width: 320px;
+    height: 360px;
+  }
+  .gallery-slide.is-active {
+    width: 500px;
+    height: 640px;
+  }
+  .gallery-slide.is-prev {
+    -webkit-transform: translate(-200%, -50%);
+       -moz-transform: translate(-200%, -50%);
+        -ms-transform: translate(-200%, -50%);
+            transform: translate(-200%, -50%);
+  }
+  .gallery-slide.is-next {
+    -webkit-transform: translate(100%, -50%);
+       -moz-transform: translate(100%, -50%);
+        -ms-transform: translate(100%, -50%);
+            transform: translate(100%, -50%);
+  }
+  .gallery-arrow--left {
+    left: 0;
+  }
+  .gallery-arrow--right {
+    right: 0;
+  }
+  .gallery-arrow {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+  }
+  .gallery-dots {
+    bottom: -24px;
+  }
+}
 @media (min-width: 1025px){
   .header {
     padding: 10px 40px;
@@ -936,13 +1173,11 @@ meter {
     padding-left: 100px;
   }
 }
-
 @media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1025px) and (min--moz-device-pixel-ratio: 2), (min-width: 1025px) and (min-resolution: 2dppx){
   .philosophy-bg {
     background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_desktop_bg@2X.png");
   }
 }
-
 @media (min-width: 1200px){
   .infrastructure {
     padding: 100px 0;
@@ -1071,7 +1306,6 @@ meter {
     font-weight: 500;
   }
 }
-
 @media screen and (min-width: 1200px){
   .view {
     background-image: url(src/img/group.svg), url(src/img/girl.svg), url(src/img/background.png);
@@ -1086,7 +1320,6 @@ meter {
     margin-top: 445px;
   }
 }
-
 @media (max-width: 768px){
   .header .header-button {
     display: none;
@@ -1118,7 +1351,6 @@ meter {
     margin-left: auto;
   }
 }
-
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-resolution: 2dppx){
   .philosophy-bg {
     background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_mobile_bg@2X.png");
