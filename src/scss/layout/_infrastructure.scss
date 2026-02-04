@@ -10,10 +10,11 @@
     font-size: 28px;
     margin-bottom: 20px;
     font-family: "Poppins";
-    color: #7e6d53;
-    margin-left: 20px;
-    line-height: 100%;
+    color: #7e6d53;    line-height: 100%;
     font-weight: 500;
+    position: absolute;
+    top: -50px;
+    left: 5px;
   }
 
   &-bg {
@@ -171,7 +172,6 @@
     &-container {
         display: flex;
         justify-content: center;
-        padding-right: 120px;
     }
 
 
@@ -182,12 +182,12 @@
       color: #7e6d53;
       line-height: 100%;
       font-weight: 500;
+      left: 0;
     }
 
     &-bg {
-      width: 1144px;
+      width: 90%;
       height: 486px;
-      left: 68px;
       background-image: url("/src/img/Infrastructure.png");
       background-size: cover;
       background-position: center;
