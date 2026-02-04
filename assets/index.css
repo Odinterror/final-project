@@ -365,9 +365,11 @@ meter {
   margin-bottom: 20px;
   font-family: "Poppins";
   color: #7e6d53;
-  margin-left: 20px;
   line-height: 100%;
   font-weight: 500;
+  position: absolute;
+  top: -50px;
+  left: 5px;
 }
 .infrastructure-bg {
   background-image: url("/final-project/assets/Infrastructure-mobile.png");
@@ -954,7 +956,6 @@ meter {
     -webkit-justify-content: center;
        -moz-box-pack: center;
             justify-content: center;
-    padding-right: 120px;
   }
   .infrastructure-title {
     width: 275px;
@@ -963,11 +964,11 @@ meter {
     color: #7e6d53;
     line-height: 100%;
     font-weight: 500;
+    left: 0;
   }
   .infrastructure-bg {
-    width: 1144px;
+    width: 90%;
     height: 486px;
-    left: 68px;
     background-image: url("/final-project/assets/Infrastructure.png");
     -webkit-background-size: cover;
             background-size: cover;
