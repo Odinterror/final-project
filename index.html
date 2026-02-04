@@ -176,7 +176,66 @@
         </div>
       </section>
       <section class="gallery">
-        <h2 class="gallery-title">Gallery</h2>
+        <div class="gallery-container">
+          <h2 class="gallery-title">Gallery</h2>
+          <div class="gallery-slider" aria-label="Gallery slider">
+            <button
+              class="gallery-arrow gallery-arrow--left"
+              aria-label="Previous slide"
+            >
+              &#10094;
+            </button>
+
+            <div class="gallery-track" role="list">
+              <div class="gallery-slide" role="listitem">
+                <img
+                  class="gallery-image"
+                  src="./src/img/gallery_first.png"
+                  alt="Gallery image 1"
+                />
+              </div>
+              <div class="gallery-slide" role="listitem">
+                <img
+                  class="gallery-image"
+                  src="./src/img/gallery_second.png"
+                  alt="Gallery image 2"
+                />
+              </div>
+              <div class="gallery-slide" role="listitem">
+                <img
+                  class="gallery-image"
+                  src="./src/img/gallery_third.png"
+                  alt="Gallery image 3"
+                />
+              </div>
+            </div>
+
+            <button
+              class="gallery-arrow gallery-arrow--right"
+              aria-label="Next slide"
+            >
+              &#10095;
+            </button>
+
+            <div class="gallery-dots" role="tablist" aria-label="Select slide">
+              <button
+                class="gallery-dot"
+                type="button"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                class="gallery-dot"
+                type="button"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                class="gallery-dot"
+                type="button"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="contact">
         <h2 class="contact-title">Get in touch!</h2>
