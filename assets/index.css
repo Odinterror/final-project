@@ -924,6 +924,159 @@ meter {
      -moz-box-flex: 0;
           flex: 0 0 auto;
 }
+
+footer.footer {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#7e6d53), to(#2d2a22));
+  background: -webkit-linear-gradient(left, #7e6d53 0%, #2d2a22 100%);
+  background: -moz-linear-gradient(left, #7e6d53 0%, #2d2a22 100%);
+  background: linear-gradient(90deg, #7e6d53 0%, #2d2a22 100%);
+  color: #eee8dc;
+  padding: 40px 0 24px;
+  letter-spacing: 0.2px;
+  display: block;
+  overflow-x: hidden;
+}
+
+.footer-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  -webkit-column-gap: 24px;
+     -moz-column-gap: 24px;
+          column-gap: 24px;
+  row-gap: 16px;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+     -moz-box-align: start;
+          align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer .logo {
+  width: 78px;
+  height: auto;
+  opacity: 0.9;
+}
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-navigation, .footer-contacts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 140px;
+     -moz-box-flex: 1;
+          flex: 1 1 140px;
+}
+.footer-navigation-title h2, .footer-contacts-title h2 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f2ecdf;
+}
+.footer .navigation-item a, .footer-contacts-item p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ddd6c7;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.footer .navigation-item a {
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.footer .navigation-item a:hover, .footer .navigation-item a:focus {
+  color: #ffffff;
+}
+.footer-icon-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+          flex-direction: row;
+  gap: 16px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+          justify-content: flex-start;
+  grid-column: 1/-1;
+}
+.footer-icon-list li.footer-icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  width: 32px;
+  height: 32px;
+  line-height: 0;
+}
+.footer-icon-list svg.footer-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  opacity: 0.9;
+  overflow: visible;
+}
+.footer-text {
+  margin: 18px auto 0;
+  max-width: 1100px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #bdb3a3;
+}
+
+footer.footer > svg.footer-icon {
+  display: none;
+  width: 72px;
+  height: 56px;
+  margin: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+     -moz-box-flex: 0;
+          flex: 0 0 auto;
+  opacity: 0.95;
+  background: url(src/img/NICE_VIEW.svg) center/contain no-repeat;
+}
+
+footer.footer > svg.footer-icon use {
+  display: none;
+}
+
 @media (min-width: 768px){
   .header .header-button {
     display: none;
@@ -1230,7 +1383,64 @@ meter {
        -moz-box-pack: center;
             justify-content: center;
   }
+  footer.footer {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    -webkit-column-gap: 56px;
+       -moz-column-gap: 56px;
+            column-gap: 56px;
+    row-gap: 16px;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+       -moz-box-align: start;
+            align-items: start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+            justify-content: center;
+    padding: 56px 32px 28px;
+  }
+  .footer-item {
+    display: grid;
+    grid-template-columns: 200px minmax(240px, 1fr) 32px;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+    padding: 0;
+    width: 100%;
+    max-width: 980px;
+    margin: 0;
+  }
+  .footer-navigation, .footer-contacts {
+    min-width: 0;
+  }
+  .footer-icon-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
+    justify-self: end;
+    margin-left: 0;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+  }
+  .footer-text {
+    -webkit-flex-basis: 100%;
+            flex-basis: 100%;
+    grid-column: 1/-1;
+  }
+  footer.footer > svg.footer-icon {
+    display: block;
+  }
 }
+
 @media screen and (min-width: 768px){
   .view {
     background-image: url(src/img/group.svg), url(src/img/girl.svg), url(src/img/view-bg-tablet.png);
@@ -1280,114 +1490,8 @@ meter {
     margin-right: 30px;
   }
 }
+
 @media (min-width: 1024px){
-  .gallery-slider {
-    min-height: 420px;
-    width: 100%;
-    margin-left: 0;
-    -webkit-transform: none;
-       -moz-transform: none;
-        -ms-transform: none;
-            transform: none;
-    padding: 0 12px;
-  }
-  .gallery-track {
-    width: min(1200px, 92vw);
-    height: 660px;
-  }
-  .gallery-slide {
-    width: 320px;
-    height: 360px;
-  }
-  .gallery-slide.is-active {
-    width: 500px;
-    height: 500px;
-  }
-  .gallery-slide.is-prev {
-    -webkit-transform: translate(-220%, -50%);
-       -moz-transform: translate(-220%, -50%);
-        -ms-transform: translate(-220%, -50%);
-            transform: translate(-220%, -50%);
-    width: 230px;
-    height: 370px;
-  }
-  .gallery-slide.is-next {
-    -webkit-transform: translate(120%, -50%);
-       -moz-transform: translate(120%, -50%);
-        -ms-transform: translate(120%, -50%);
-            transform: translate(120%, -50%);
-    width: 230px;
-    height: 370px;
-  }
-  .gallery-arrow--left {
-    left: 20%;
-  }
-  .gallery-arrow--right {
-    right: 20%;
-  }
-  .gallery-arrow {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: flex;
-  }
-  .gallery-dots {
-    bottom: -24px;
-  }
-}
-@media screen and (min-width: 1024px){
-  .apartment {
-    height: 643px;
-  }
-}
-@media (min-width: 1025px){
-  .header {
-    padding: 10px 40px;
-  }
-  .header .header-button {
-    display: block;
-  }
-  .header .header-nav .header-list {
-    gap: 50px;
-  }
-  .philosophy-container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .philosophy-card-bg {
-    padding-bottom: 20px;
-  }
-  .philosophy-bg {
-    background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_desktop_bg.png");
-  }
-  .philosophy-list {
-    padding-left: 0;
-    margin-top: 50px;
-    -webkit-column-gap: 50px;
-       -moz-column-gap: 50px;
-            column-gap: 50px;
-    row-gap: 140px;
-  }
-  .philosophy-title {
-    font-size: 26px;
-  }
-  .philosophy-text2 {
-    font-size: 16px;
-    max-width: 400px;
-    margin-top: 4px;
-  }
-  .philosophy-copy {
-    margin-top: 40px;
-    margin-bottom: 0;
-    padding-left: 100px;
-  }
-}
-@media (min-width: 1025px) and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1025px) and (min-width: 1025px) and (min--moz-device-pixel-ratio: 2), (min-width: 1025px) and (min-width: 1025px) and (min-resolution: 2dppx){
-  .philosophy-bg {
-    background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_desktop_bg@2X.png");
-  }
-}
-@media (min-width: 1200px){
   .infrastructure {
     padding: 100px 0;
   }
@@ -1514,7 +1618,133 @@ meter {
     font-size: 15px;
     font-weight: 500;
   }
+  .gallery-slider {
+    min-height: 420px;
+    width: 100%;
+    margin-left: 0;
+    -webkit-transform: none;
+       -moz-transform: none;
+        -ms-transform: none;
+            transform: none;
+    padding: 0 12px;
+  }
+  .gallery-track {
+    width: min(1200px, 92vw);
+    height: 660px;
+  }
+  .gallery-slide {
+    width: 320px;
+    height: 360px;
+  }
+  .gallery-slide.is-active {
+    width: 500px;
+    height: 500px;
+  }
+  .gallery-slide.is-prev {
+    -webkit-transform: translate(-220%, -50%);
+       -moz-transform: translate(-220%, -50%);
+        -ms-transform: translate(-220%, -50%);
+            transform: translate(-220%, -50%);
+    width: 230px;
+    height: 370px;
+  }
+  .gallery-slide.is-next {
+    -webkit-transform: translate(120%, -50%);
+       -moz-transform: translate(120%, -50%);
+        -ms-transform: translate(120%, -50%);
+            transform: translate(120%, -50%);
+    width: 230px;
+    height: 370px;
+  }
+  .gallery-arrow--left {
+    left: 20%;
+  }
+  .gallery-arrow--right {
+    right: 20%;
+  }
+  .gallery-arrow {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+  }
+  .gallery-dots {
+    bottom: -24px;
+  }
+  .footer-item {
+    grid-template-columns: 220px minmax(280px, 1fr) 32px;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+    max-width: 980px;
+    width: min(100%, 980px);
+    justify-self: center;
+  }
+  .footer-text {
+    padding: 0 28px;
+  }
+  footer.footer > svg.footer-icon {
+    width: 80px;
+    height: 62px;
+    margin-top: 2px;
+  }
 }
+
+@media screen and (min-width: 1024px){
+  .apartment {
+    height: 643px;
+  }
+}
+
+@media (min-width: 1025px){
+  .header {
+    padding: 10px 40px;
+  }
+  .header .header-button {
+    display: block;
+  }
+  .header .header-nav .header-list {
+    gap: 50px;
+  }
+  .philosophy-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .philosophy-card-bg {
+    padding-bottom: 20px;
+  }
+  .philosophy-bg {
+    background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_desktop_bg.png");
+  }
+  .philosophy-list {
+    padding-left: 0;
+    margin-top: 50px;
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+    row-gap: 140px;
+  }
+  .philosophy-title {
+    font-size: 26px;
+  }
+  .philosophy-text2 {
+    font-size: 16px;
+    max-width: 400px;
+    margin-top: 4px;
+  }
+  .philosophy-copy {
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-left: 100px;
+  }
+}
+
+@media (min-width: 1025px) and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1025px) and (min-width: 1025px) and (min--moz-device-pixel-ratio: 2), (min-width: 1025px) and (min-width: 1025px) and (min-resolution: 2dppx){
+  .philosophy-bg {
+    background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_desktop_bg@2X.png");
+  }
+}
+
 @media screen and (min-width: 1200px){
   .view {
     background-image: url(src/img/group.svg), url(src/img/girl.svg), url(src/img/background.png);
@@ -1535,11 +1765,13 @@ meter {
     gap: 120px;
   }
 }
+
 @media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) and (min--moz-device-pixel-ratio: 2), (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) and (min-resolution: 2dppx){
   .philosophy-bg {
     background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_tablet_bg@2X.png");
   }
 }
+
 @media (max-width: 768px){
   .header .header-button {
     display: none;
@@ -1571,6 +1803,7 @@ meter {
     margin-left: auto;
   }
 }
+
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min--moz-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx){
   .philosophy-bg {
     background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_mobile_bg@2X.png");
