@@ -694,7 +694,7 @@ meter {
 }
 
 .gallery {
-  background: #f1ede7;
+  background: #f5f1ea;
   padding: 60px 0 80px;
   overflow-x: hidden;
 }
@@ -751,31 +751,28 @@ meter {
   transition: transform 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease, -moz-transform 0.4s ease;
 }
 .gallery-slide.is-active {
-  width: 240px;
+  width: 180px;
   height: 180px;
   opacity: 1;
   z-index: 3;
 }
 .gallery-slide.is-prev {
-  -webkit-transform: translate(-185%, -50%);
-     -moz-transform: translate(-185%, -50%);
-      -ms-transform: translate(-185%, -50%);
-          transform: translate(-185%, -50%);
+  -webkit-transform: translate(-165%, -50%);
+     -moz-transform: translate(-165%, -50%);
+      -ms-transform: translate(-165%, -50%);
+          transform: translate(-165%, -50%);
   z-index: 2;
 }
 .gallery-slide.is-next {
-  -webkit-transform: translate(85%, -50%);
-     -moz-transform: translate(85%, -50%);
-      -ms-transform: translate(85%, -50%);
-          transform: translate(85%, -50%);
+  -webkit-transform: translate(65%, -50%);
+     -moz-transform: translate(65%, -50%);
+      -ms-transform: translate(65%, -50%);
+          transform: translate(65%, -50%);
   z-index: 2;
 }
 .gallery-image {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  display: block;
 }
 .gallery-slide.is-active .gallery-image {
   -o-object-fit: cover;
@@ -828,6 +825,7 @@ meter {
   display: flex;
   gap: 10px;
   z-index: 5;
+  bottom: 40px;
 }
 .gallery-dot {
   width: 8px;
@@ -1141,20 +1139,24 @@ meter {
     height: 280px;
   }
   .gallery-slide.is-active {
-    width: 360px;
-    height: 260px;
+    width: 255px;
+    height: 330px;
   }
   .gallery-slide.is-prev {
-    -webkit-transform: translate(-170%, -50%);
-       -moz-transform: translate(-170%, -50%);
-        -ms-transform: translate(-170%, -50%);
-            transform: translate(-170%, -50%);
+    -webkit-transform: translate(-168%, -50%);
+       -moz-transform: translate(-168%, -50%);
+        -ms-transform: translate(-168%, -50%);
+            transform: translate(-168%, -50%);
+    width: 200px;
+    height: 200px;
   }
   .gallery-slide.is-next {
-    -webkit-transform: translate(70%, -50%);
-       -moz-transform: translate(70%, -50%);
-        -ms-transform: translate(70%, -50%);
-            transform: translate(70%, -50%);
+    -webkit-transform: translate(68%, -50%);
+       -moz-transform: translate(68%, -50%);
+        -ms-transform: translate(68%, -50%);
+            transform: translate(68%, -50%);
+    width: 200px;
+    height: 200px;
   }
   .gallery-arrow {
     display: -webkit-box;
@@ -1163,13 +1165,13 @@ meter {
     display: flex;
   }
   .gallery-arrow--left {
-    left: 0;
+    left: -40px;
   }
   .gallery-arrow--right {
-    right: 0;
+    right: -40px;
   }
   .gallery-dots {
-    bottom: -24px;
+    bottom: -70px;
   }
   .contact {
     padding: 70px 0 80px;
@@ -1299,25 +1301,29 @@ meter {
   }
   .gallery-slide.is-active {
     width: 500px;
-    height: 640px;
+    height: 500px;
   }
   .gallery-slide.is-prev {
-    -webkit-transform: translate(-200%, -50%);
-       -moz-transform: translate(-200%, -50%);
-        -ms-transform: translate(-200%, -50%);
-            transform: translate(-200%, -50%);
+    -webkit-transform: translate(-220%, -50%);
+       -moz-transform: translate(-220%, -50%);
+        -ms-transform: translate(-220%, -50%);
+            transform: translate(-220%, -50%);
+    width: 230px;
+    height: 370px;
   }
   .gallery-slide.is-next {
-    -webkit-transform: translate(100%, -50%);
-       -moz-transform: translate(100%, -50%);
-        -ms-transform: translate(100%, -50%);
-            transform: translate(100%, -50%);
+    -webkit-transform: translate(120%, -50%);
+       -moz-transform: translate(120%, -50%);
+        -ms-transform: translate(120%, -50%);
+            transform: translate(120%, -50%);
+    width: 230px;
+    height: 370px;
   }
   .gallery-arrow--left {
-    left: 0;
+    left: 20%;
   }
   .gallery-arrow--right {
-    right: 0;
+    right: 20%;
   }
   .gallery-arrow {
     display: -webkit-box;
