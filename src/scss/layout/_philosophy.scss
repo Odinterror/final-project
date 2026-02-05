@@ -23,12 +23,13 @@
     &::before {
       content: "";
       display: block;
-      height: 10px;
+      height: 70px;
       background: #ede9e3;
     }
   }
 
-  @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+  @media (max-width: 767px) and (min-resolution: 2dppx),
+    (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
     &-bg {
       background-image:
         url("../src/img/philosophy_img's/man.svg"),
@@ -171,7 +172,8 @@
       margin-top: 4px;
     }
 
-    @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+    @media (min-width: 768px) and (max-width: 1024px) and (min-resolution: 2dppx),
+      (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
       &-bg {
         background-image:
           url("../src/img/philosophy_img's/man.svg"),
@@ -220,7 +222,8 @@
       padding-left: 100px;
     }
 
-    @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+    @media (min-width: 1025px) and (min-resolution: 2dppx),
+      (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2) {
       &-bg {
         background-image:
           url("../src/img/philosophy_img's/man.svg"),
