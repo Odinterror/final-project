@@ -51,3 +51,38 @@ if (gallery) {
 
   update();
 }
+
+const contactModal = document.getElementById("contact-modal");
+if (contactModal) {
+  const openButtons = document.querySelectorAll(".contact-btn");
+  const closeButton = contactModal.querySelector(".contact-modal__close");
+  const overlay = contactModal.querySelector(".contact-modal__overlay");
+
+  const openModal = () => {
+    contactModal.classList.add("is-open");
+    contactModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  };
+
+  const closeModal = () => {
+    contactModal.classList.remove("is-open");
+    contactModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  };
+
+  openButtons.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      openModal();
+    });
+  });
+
+  closeButton?.addEventListener("click", closeModal);
+  overlay?.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+}

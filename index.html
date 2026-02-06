@@ -344,6 +344,111 @@
             </li>
           </ul>
         </div>
+      </section>
+      <div class="contact-modal" id="contact-modal" aria-hidden="true">
+        <div class="contact-modal__overlay"></div>
+        <div
+          class="contact-modal__panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="contact-modal-title"
+        >
+          <button class="contact-modal__close" type="button" aria-label="Close">
+            <img src="./src/img/cross_contact.svg" alt="" />
+          </button>
+          <h3 class="contact-modal__title" id="contact-modal-title">
+            Leave your contacts and we will contact you
+          </h3>
+          <form class="contact-modal__form">
+            <label class="contact-modal__label" for="contact-name">Name</label>
+            <input
+              class="contact-modal__input"
+              id="contact-name"
+              type="text"
+              placeholder="Yuliia"
+            />
+            <label class="contact-modal__label" for="contact-phone"
+              >Telephone</label
+            >
+            <input
+              class="contact-modal__input"
+              id="contact-phone"
+              type="tel"
+              placeholder="+380"
+            />
+            <label class="contact-modal__label" for="contact-email">Email</label>
+            <input
+              class="contact-modal__input"
+              id="contact-email"
+              type="email"
+              placeholder="contact@gmail.com"
+            />
+            <button class="contact-modal__submit" type="button">
+              Contact us
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <img class="logo" src="" alt="" />
+      <h2 class="navigation-title">Navigation</h2>
+      <ul class="navigation">
+        <li class="navigation-item">
+          <a href="">Home</a>
+        </li>
+        <li class="navigation-item">
+          <a href="">About</a>
+        </li>
+        <li class="navigation-item">
+          <a href="">Apartments</a>
+        </li>
+        <li class="navigation-item">
+          <a href="">Infrastructure</a>
+        </li>
+        <li class="navigation-item">
+          <a href="">Gallery</a>
+        </li>
+      </ul>
+      <h2 class="footer-contacts-title">Contacts</h2>
+      <ul class="footer-contacts">
+        <li class="footer-contacts-item">
+          <p>(406) 555-0120</p>
+        </li>
+        <li class="footer-contacts-item">
+          <p>ul. Chodkiewicza Karola 111, Chorzów</p>
+        </li>
+        <li class="footer-contacts-item">
+          <p>deanna.curtis@example.com</p>
+        </li>
+      </ul>
+      <ul class="footer-icon-list">
+        <li class="footer-icon">
+          <svg class="footer-icon" width="0" height="0">
+            <use href=""></use>
+          </svg>
+        </li>
+        <li class="footer-icon">
+          <svg class="footer-icon" width="0" height="0">
+            <use href=""></use>
+          </svg>
+        </li>
+        <li class="footer-icon">
+          <svg class="footer-icon" width="0" height="0">
+            <use href=""></use>
+          </svg>
+        </li>
+        <li class="footer-icon">
+          <svg class="footer-icon" width="0" height="0">
+            <use href=""></use>
+          </svg>
+        </li>
+      </ul>
+      <p class="footer-text">
+        By using this website, you agree to the Terms of Service and Privacy
+        Policy
+      </p>
+    </footer>
         <p class="footer-text">
           By using this website, you agree to the Terms of Service and Privacy
           Policy
