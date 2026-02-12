@@ -115,3 +115,78 @@ if (contactModal) {
     }
   });
 }
+const apartmentModal = document.getElementById("apartment-modal");
+if (apartmentModal) {
+  const openButtons = document.querySelectorAll(".apartment-btn");
+  const closeButton = apartmentModal.querySelector(".apartment-modal__close");
+  const overlay = apartmentModal.querySelector(".apartment-modal__overlay");
+  const modalImage = apartmentModal.querySelector(".apartment-modal__image");
+  const modalTitle = apartmentModal.querySelector(".apartment-modal__title");
+  const modalArea = apartmentModal.querySelector("[data-apartment-area]");
+  const modalRooms = apartmentModal.querySelector("[data-apartment-rooms]");
+  const modalPrice = apartmentModal.querySelector("[data-apartment-price]");
+  const modalCost = apartmentModal.querySelector("[data-apartment-cost]");
+  const openModal = (button) => {
+    const img = button.querySelector("img");
+    const title = button.querySelector(".apartment-subtitle");
+    const area = button.querySelector(".apartment-text");
+    const areaValue = button.dataset.area;
+    const roomsValue = button.dataset.rooms;
+    const priceValue = button.dataset.price;
+    const costValue = button.dataset.cost;
+    if (modalImage) {
+      const modalSrc = button.dataset.modalImage;
+      if (modalSrc) {
+        modalImage.src = modalSrc;
+      } else if (img) {
+        modalImage.src = img.src;
+      }
+      modalImage.alt = (img == null ? void 0 : img.alt) || "Apartment";
+    }
+    const modalSrcCheck = button.dataset.modalImage || (img == null ? void 0 : img.src) || "";
+    apartmentModal.classList.toggle(
+      "apartment-modal--house-2",
+      modalSrcCheck.includes("house2")
+    );
+    if (title && modalTitle) {
+      const rawTitle = title.textContent.trim();
+      const modalText = rawTitle.replace(/^Type\s*/i, "House ");
+      modalTitle.textContent = modalText;
+    }
+    if (modalArea) {
+      if (areaValue) {
+        modalArea.textContent = areaValue;
+      } else if (area) {
+        const cleaned = area.textContent.replace(/total area/i, "").trim();
+        modalArea.textContent = cleaned || area.textContent.trim();
+      }
+    }
+    if (roomsValue && modalRooms) {
+      modalRooms.textContent = roomsValue;
+    }
+    if (priceValue && modalPrice) {
+      modalPrice.textContent = priceValue;
+    }
+    if (costValue && modalCost) {
+      modalCost.textContent = costValue;
+    }
+    apartmentModal.classList.add("is-open");
+    apartmentModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  };
+  const closeModal = () => {
+    apartmentModal.classList.remove("is-open");
+    apartmentModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  };
+  openButtons.forEach((btn) => {
+    btn.addEventListener("click", () => openModal(btn));
+  });
+  closeButton == null ? void 0 : closeButton.addEventListener("click", closeModal);
+  overlay == null ? void 0 : overlay.addEventListener("click", closeModal);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+}
