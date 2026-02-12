@@ -39,13 +39,17 @@ margin-left: 68px;
 gap: 120px;
     }
 }
-.apartment-item:hover{
-    border: 2px solid #7E6D53;
-    border-radius: 16px;
-}
 .apartment-item{
     padding-top: 20px;
     padding-bottom:20px ;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    transition: border-color 150ms ease;
+}
+.apartment-item:hover,
+.apartment-item:focus-within,
+.apartment-item:active{
+    border-color: #7E6D53;
 }
 .apartment-btn {
 }

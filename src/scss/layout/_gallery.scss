@@ -219,11 +219,13 @@
     }
 
     &-arrow--left {
-      left: 12px;
+      left: -10%;
+      position: absolute;
     }
 
     &-arrow--right {
-      right: 12px;
+      right: -10%;
+      position: absolute;
     }
 
     &-arrow {
