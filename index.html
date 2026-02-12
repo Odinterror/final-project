@@ -60,7 +60,7 @@
           <div class="container">
             <h1 class="view-title">Nice view</h1>
             <p class="view-text">For your comfortable life with your family</p>
-            <button class="view-button">Contact us</button>
+            <a class="view-button" href="#contact">Contact us</a>
           </div>
         </section>
         <section class="philosophy">
@@ -217,10 +217,16 @@
                     >2</span
                   >
                 </p>
-                <p class="apartment-modal__meta apartment-modal__meta--accent" data-apartment-price>
+                <p
+                  class="apartment-modal__meta apartment-modal__meta--accent"
+                  data-apartment-price
+                >
                   from 1000 dol/m2
                 </p>
-                <p class="apartment-modal__meta apartment-modal__meta--muted" data-apartment-cost>
+                <p
+                  class="apartment-modal__meta apartment-modal__meta--muted"
+                  data-apartment-cost
+                >
                   about 50 200 dollars
                 </p>
                 <button class="apartment-modal__cta" type="button">
@@ -328,7 +334,7 @@
             </div>
           </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
           <h2 class="contact-title">Get in touch!</h2>
           <h3 class="contact-subtitle">Contact us for a quote.</h3>
           <div class="contact-wrap">
@@ -393,7 +399,9 @@
               type="tel"
               placeholder="+380"
             />
-            <label class="contact-modal__label" for="contact-email">Email</label>
+            <label class="contact-modal__label" for="contact-email"
+              >Email</label
+            >
             <input
               class="contact-modal__input"
               id="contact-email"

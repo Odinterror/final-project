@@ -353,7 +353,7 @@ meter {
   font-family: Poppins;
   font-weight: 400;
   font-size: 48px;
-  color: #7E6D53;
+  color: #7e6d53;
 }
 .view-text {
   font-family: Poppins;
@@ -361,16 +361,28 @@ meter {
   font-size: 16px;
   width: 184px;
   text-align: center;
-  color: #7E6D53;
+  color: #7e6d53;
 }
 .view-button {
   width: 200px;
   height: 50px;
-  background-color: #FCFCFB;
+  background-color: #fcfcfb;
   font-family: Poppins;
   font-weight: 300;
   font-size: 20px;
-  color: #2D2A22;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  color: #2d2a22;
   border-radius: 10px;
   text-align: center;
   margin-top: 267px;
@@ -661,14 +673,20 @@ meter {
   margin-bottom: 28px;
 }
 
-.apartment-item:hover {
-  border: 2px solid #7E6D53;
-  border-radius: 16px;
-}
-
 .apartment-item {
   padding-top: 20px;
   padding-bottom: 20px;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  -webkit-transition: border-color 150ms ease;
+  -moz-transition: border-color 150ms ease;
+  transition: border-color 150ms ease;
+}
+
+.apartment-item:hover,
+.apartment-item:focus-within,
+.apartment-item:active {
+  border-color: #7E6D53;
 }
 
 .apartment-subtitle {
@@ -2088,10 +2106,12 @@ footer.footer > svg.footer-icon use {
     height: 370px;
   }
   .gallery-arrow--left {
-    left: 20%;
+    left: -10%;
+    position: absolute;
   }
   .gallery-arrow--right {
-    right: 20%;
+    right: -10%;
+    position: absolute;
   }
   .gallery-arrow {
     display: -webkit-box;
