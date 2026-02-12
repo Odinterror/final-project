@@ -234,6 +234,76 @@
             </div>
           </div>
         </div>
+        <div class="catalog-modal" id="catalog-modal" aria-hidden="true">
+          <div class="catalog-modal__overlay"></div>
+          <div
+            class="catalog-modal__panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="catalog-modal-title"
+          >
+            <button
+              class="catalog-modal__close"
+              type="button"
+              aria-label="Close"
+            >
+              <img src="./src/img/cross_contact.svg" alt="" />
+            </button>
+            <div class="catalog-modal__step catalog-modal__step--form">
+              <div class="catalog-modal__media">
+                <img
+                  class="catalog-modal__image"
+                  src="./src/img/idea_man_on_chair.svg"
+                  alt="Man on chair"
+                />
+              </div>
+              <div class="catalog-modal__content">
+                <p class="catalog-modal__eyebrow" id="catalog-modal-title">
+                  Download the catalog
+                </p>
+                <p class="catalog-modal__text">
+                  We will send you more photos, videos and information by mail
+                </p>
+                <form class="catalog-modal__form">
+                  <label class="catalog-modal__label" for="catalog-email"
+                    >Email address</label
+                  >
+                  <div class="catalog-modal__field">
+                    <input
+                      class="catalog-modal__input"
+                      id="catalog-email"
+                      type="email"
+                      placeholder="Email address"
+                    />
+                    <button
+                      class="catalog-modal__submit"
+                      type="submit"
+                      aria-label="Send"
+                    >
+                      <img
+                        src="./src/img/ant-design_send-outlined.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="catalog-modal__step catalog-modal__step--success">
+              <div class="catalog-modal__media">
+                <img
+                  class="catalog-modal__image"
+                  src="./src/img/idea_man_on_chair.svg"
+                  alt="Man on chair"
+                />
+              </div>
+              <div class="catalog-modal__content catalog-modal__content--center">
+                <p class="catalog-modal__eyebrow">Great!</p>
+                <p class="catalog-modal__text">Now check your mail</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="infrastructure">
           <div class="infrastructure-container">
             <div class="infrastructure-bg">
