@@ -153,6 +153,8 @@ meter {
   top: 0;
   left: 0;
   z-index: 1000;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 .header .header-wrap {
   padding: 15px;
@@ -173,18 +175,33 @@ meter {
   border-radius: 8px;
   color: #fcfcfb;
   margin-left: 100px;
-  width: 152;
-  height: 40;
+  width: 144px;
+  height: 36px;
   top: 30px;
   left: 1060px;
   opacity: 1;
   gap: 10px;
   border-radius: 8px;
   border-width: 1px;
-  padding-top: 4px;
-  padding-right: 29px;
-  padding-bottom: 4px;
-  padding-left: 29px;
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 36px;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .header .logo-wrap {
   top: 22px;
@@ -488,16 +505,10 @@ meter {
   opacity: 1;
   background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_mobile_bg.png");
   background-position: 47% 81%, 45% center;
-  -webkit-background-size: clamp(110px, 16vw, 70px) auto, cover;
-          background-size: clamp(110px, 16vw, 70px) auto, cover;
+  -webkit-background-size: clamp(70px, 16vw, 110px) auto, cover;
+          background-size: clamp(70px, 16vw, 110px) auto, cover;
   background-repeat: no-repeat, no-repeat;
   z-index: 1;
-}
-.philosophy-bg::before {
-  content: "";
-  display: block;
-  height: 70px;
-  background: #ede9e3;
 }
 .philosophy-container {
   position: relative;
@@ -1442,6 +1453,12 @@ footer.footer {
   font-size: 11px;
   color: #bdb3a3;
 }
+.footer .footer-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  color: #ffffff;
+}
 
 footer.footer > svg.footer-icon {
   display: none;
@@ -1461,6 +1478,20 @@ footer.footer > svg.footer-icon use {
 }
 
 @media (min-width: 768px){
+  .header .header-wrap {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
+    padding: 18px 24px;
+  }
+  .header .logo-wrap {
+    margin-left: 12px;
+  }
   .header .header-button {
     display: none;
   }
@@ -1484,14 +1515,18 @@ footer.footer > svg.footer-icon use {
     display: -webkit-flex;
     display: -moz-box;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
        -moz-box-align: center;
             align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+       -moz-box-flex: 1;
+            flex: 1 1 auto;
   }
   .header .header-nav .close {
     display: none;
@@ -1509,12 +1544,16 @@ footer.footer > svg.footer-icon use {
             flex-direction: row;
     gap: 40px;
     margin: 0;
-    width: 568;
-    height: 20;
+    width: auto;
+    height: auto;
     top: 40px;
     left: 168px;
     opacity: 1;
     gap: 32px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
   }
   .header .header-nav .header-list .header-item {
     margin: 0;
@@ -2140,6 +2179,18 @@ footer.footer > svg.footer-icon use {
   .header {
     padding: 10px 40px;
   }
+  .header .header-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
+  }
+  .header .logo-wrap {
+    margin-left: 16px;
+    margin-right: 24px;
+  }
   .header .header-button {
     display: block;
   }
@@ -2241,6 +2292,15 @@ footer.footer > svg.footer-icon use {
   }
   .header .burger {
     margin-left: auto;
+  }
+}
+
+@media (max-width: 767px){
+  .philosophy-card-bg {
+    padding-bottom: 4px;
+  }
+  .philosophy-card-content {
+    padding-bottom: 22px;
   }
 }
 
