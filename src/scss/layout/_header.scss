@@ -4,6 +4,8 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 
   .header-wrap {
     padding: 15px;
@@ -17,18 +19,22 @@
     border-radius: 8px;
     color: #fcfcfb;
     margin-left: 100px;
-    width: 152;
-    height: 40;
+    width: 144px;
+    height: 36px;
     top: 30px;
     left: 1060px;
     opacity: 1;
     gap: 10px;
     border-radius: 8px;
     border-width: 1px;
-    padding-top: 4px;
-    padding-right: 29px;
-    padding-bottom: 4px;
-    padding-left: 29px;
+    padding: 0 20px;
+    font-size: 15px;
+    line-height: 36px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
   .logo-wrap {
     top: 22px;
@@ -151,6 +157,15 @@
 // TABLET
 @media (min-width: 768px) {
   .header {
+    .header-wrap {
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px;
+    }
+
+    .logo-wrap {
+      margin-left: 12px;
+    }
     .header-button {
       display: none;
     }
@@ -169,8 +184,9 @@
       padding-top: 0;
       right: 0;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+      flex: 1 1 auto;
 
       .close {
         display: none;
@@ -181,12 +197,13 @@
         flex-direction: row;
         gap: 40px;
         margin: 0;
-        width: 568;
-        height: 20;
+        width: auto;
+        height: auto;
         top: 40px;
         left: 168px;
         opacity: 1;
         gap: 32px;
+        align-items: center;
 
         .header-item {
           margin: 0;
@@ -200,6 +217,15 @@
 @media (min-width: 1025px) {
   .header {
     padding: 10px 40px;
+    .header-wrap {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      align-items: center;
+    }
+    .logo-wrap {
+      margin-left: 16px;
+      margin-right: 24px;
+    }
     .header-button {
       display: block;
     }

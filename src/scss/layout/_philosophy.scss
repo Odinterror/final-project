@@ -15,17 +15,10 @@
       47% 81%,
       45% center;
     background-size:
-      clamp(110px, 16vw, 70px) auto,
+      clamp(70px, 16vw, 110px) auto,
       cover;
     background-repeat: no-repeat, no-repeat;
     z-index: 1;
-
-    &::before {
-      content: "";
-      display: block;
-      height: 70px;
-      background: #ede9e3;
-    }
   }
 
   @media (max-width: 767px) and (min-resolution: 2dppx),
@@ -125,6 +118,16 @@
     color: #7e6d53;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
+  }
+
+  @media (max-width: 767px) {
+    &-card-bg {
+      padding-bottom: 4px;
+    }
+
+    &-card-content {
+      padding-bottom: 22px;
+    }
   }
 
   /* mobile */
