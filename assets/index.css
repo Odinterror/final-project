@@ -516,7 +516,7 @@ meter {
   min-height: 680px;
   opacity: 1;
   background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_mobile_bg.png");
-  background-position: 47% 81%, 45% center;
+  background-position: 78% 81%, 45% center;
   -webkit-background-size: clamp(70px, 16vw, 110px) auto, cover;
           background-size: clamp(70px, 16vw, 110px) auto, cover;
   background-repeat: no-repeat, no-repeat;
@@ -922,6 +922,20 @@ meter {
      -moz-box-pack: center;
           justify-content: center;
   text-align: center;
+  opacity: 1;
+  -webkit-align-self: flex-start;
+          align-self: flex-start;
+}
+.apartment-modal__content {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+          align-items: flex-start;
+}
+.apartment-modal__cta.contact-btn {
+  background: #7e6d53;
+  color: #ffffff;
+  border: none;
 }
 .apartment-modal.is-open {
   opacity: 1;
@@ -939,6 +953,261 @@ meter {
 }
 .apartment-modal--house-2 .apartment-modal__media {
   height: clamp(170px, 26vh, 220px);
+}
+.catalog-modal {
+  position: fixed;
+  inset: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  padding: clamp(16px, 3vw, 24px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1002;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  font-family: Poppins;
+  color: #7e6d53;
+}
+.catalog-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+.catalog-modal__panel {
+  position: relative;
+  width: 100%;
+  max-width: clamp(300px, 90vw, 560px);
+  background: #efe9e2;
+  border-radius: 16px;
+  padding: clamp(16px, 3vw, 24px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  gap: 12px;
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease, -webkit-transform 200ms ease;
+  transition: opacity 200ms ease, -webkit-transform 200ms ease;
+  -moz-transition: transform 200ms ease, opacity 200ms ease, -moz-transform 200ms ease;
+  transition: transform 200ms ease, opacity 200ms ease;
+  transition: transform 200ms ease, opacity 200ms ease, -webkit-transform 200ms ease, -moz-transform 200ms ease;
+  z-index: 1;
+}
+.catalog-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+}
+.catalog-modal__close img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.catalog-modal__step {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 14px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+}
+.catalog-modal__step--success {
+  display: none;
+}
+.catalog-modal__media {
+  width: 96px;
+  height: 96px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+}
+.catalog-modal__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.catalog-modal__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  gap: 6px;
+}
+.catalog-modal__content--center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+}
+.catalog-modal__eyebrow {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+}
+.catalog-modal__text {
+  font-weight: 300;
+  font-size: 12px;
+  margin: 0;
+}
+.catalog-modal__form {
+  margin-top: 4px;
+}
+.catalog-modal__label {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+.catalog-modal__field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #d7cec2;
+  border-radius: 12px;
+  padding: 6px 8px;
+}
+.catalog-modal__input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+          flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 12px;
+  font-family: Poppins;
+  color: #7e6d53;
+}
+.catalog-modal__input::-webkit-input-placeholder {
+  color: #7e6d53;
+  opacity: 0.6;
+}
+.catalog-modal__input::-moz-placeholder {
+  color: #7e6d53;
+  opacity: 0.6;
+}
+.catalog-modal__input:-ms-input-placeholder {
+  color: #7e6d53;
+  opacity: 0.6;
+}
+.catalog-modal__input::-ms-input-placeholder {
+  color: #7e6d53;
+  opacity: 0.6;
+}
+.catalog-modal__input::placeholder {
+  color: #7e6d53;
+  opacity: 0.6;
+}
+.catalog-modal__submit {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.catalog-modal__submit img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.catalog-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.catalog-modal.is-open .catalog-modal__overlay {
+  opacity: 1;
+}
+.catalog-modal.is-open .catalog-modal__panel {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.catalog-modal.is-success .catalog-modal__step--form {
+  display: none;
+}
+.catalog-modal.is-success .catalog-modal__step--success {
+  display: grid;
 }
 .gallery {
   background: #f5f1ea;
@@ -1051,6 +1320,12 @@ meter {
   line-height: 1;
   cursor: pointer;
   z-index: 5;
+  padding: 0;
+}
+.gallery-arrow img {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 .gallery-arrow--left {
   left: 0;
@@ -1681,9 +1956,26 @@ footer.footer > svg.footer-icon use {
     width: 152px;
     height: 24px;
   }
+  .philosophy-card-content {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .philosophy-list {
+    justify-items: center;
+  }
+  .philosophy-item {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
+  }
   .philosophy-bg {
     min-height: 760px;
     background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_tablet_bg.png");
+    background-position: 73% 81%, 45% center;
   }
   .philosophy-card-bg {
     padding-bottom: 120px;
@@ -1695,10 +1987,10 @@ footer.footer > svg.footer-icon use {
        -moz-column-gap: 64px;
             column-gap: 64px;
     row-gap: 0;
-    -webkit-box-align: start;
-    -webkit-align-items: start;
-       -moz-box-align: start;
-            align-items: start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
     max-width: 980px;
     margin: 0 auto;
     width: 100%;
@@ -1713,8 +2005,9 @@ footer.footer > svg.footer-icon use {
   .philosophy-copy {
     grid-column: 2;
     grid-row: 1;
-    margin-top: 30px;
-    margin-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
   }
   .philosophy-text2 {
     margin-top: 4px;
@@ -1890,6 +2183,23 @@ footer.footer > svg.footer-icon use {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+  .philosophy-list {
+    margin-top: 0;
+    -webkit-transform: translateY(56px);
+       -moz-transform: translateY(56px);
+        -ms-transform: translateY(56px);
+            transform: translateY(56px);
+  }
+  .philosophy-copy {
+    margin-top: 0;
+    -webkit-transform: translateY(56px);
+       -moz-transform: translateY(56px);
+        -ms-transform: translateY(56px);
+            transform: translateY(56px);
+  }
+}
+
 @media screen and (min-width: 768px){
   .view {
     background-image: url(src/img/group.svg), url(src/img/girl.svg), url(src/img/view-bg-tablet.png);
@@ -1937,6 +2247,26 @@ footer.footer > svg.footer-icon use {
     font-size: 24px;
     margin-left: 30px;
     margin-right: 30px;
+  }
+  .catalog-modal__panel {
+    max-width: 620px;
+  }
+  .catalog-modal__step {
+    grid-template-columns: 120px 1fr;
+    gap: 18px;
+  }
+  .catalog-modal__media {
+    width: 120px;
+    height: 120px;
+  }
+  .catalog-modal__eyebrow {
+    font-size: 18px;
+  }
+  .catalog-modal__text {
+    font-size: 13px;
+  }
+  .catalog-modal__input {
+    font-size: 13px;
   }
 }
 
@@ -2066,6 +2396,46 @@ footer.footer > svg.footer-icon use {
     left: 115px;
     font-size: 15px;
     font-weight: 500;
+  }
+  .philosophy-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .philosophy-card-bg {
+    padding-bottom: 20px;
+  }
+  .philosophy-bg {
+    background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_desktop_bg.png");
+    background-position: 48% 81%, 45% center;
+  }
+  .philosophy-list {
+    padding-left: 0;
+    margin-top: 0;
+    -webkit-transform: translateY(5%);
+       -moz-transform: translateY(5%);
+        -ms-transform: translateY(5%);
+            transform: translateY(5%);
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+    row-gap: 140px;
+  }
+  .philosophy-title {
+    font-size: 26px;
+  }
+  .philosophy-text2 {
+    font-size: 16px;
+    max-width: 400px;
+    margin-top: 4px;
+  }
+  .philosophy-copy {
+    margin-top: 0;
+    -webkit-transform: translateY(4%);
+       -moz-transform: translateY(4%);
+        -ms-transform: translateY(4%);
+            transform: translateY(4%);
+    margin-bottom: 0;
+    padding-left: 100px;
   }
   .gallery-slider {
     min-height: 420px;
@@ -2217,43 +2587,6 @@ footer.footer > svg.footer-icon use {
   .header .header-nav .header-list {
     gap: 50px;
   }
-  .philosophy-container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .philosophy-card-bg {
-    padding-bottom: 20px;
-  }
-  .philosophy-bg {
-    background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_desktop_bg.png");
-  }
-  .philosophy-list {
-    padding-left: 0;
-    margin-top: 50px;
-    -webkit-column-gap: 50px;
-       -moz-column-gap: 50px;
-            column-gap: 50px;
-    row-gap: 140px;
-  }
-  .philosophy-title {
-    font-size: 26px;
-  }
-  .philosophy-text2 {
-    font-size: 16px;
-    max-width: 400px;
-    margin-top: 4px;
-  }
-  .philosophy-copy {
-    margin-top: 40px;
-    margin-bottom: 0;
-    padding-left: 100px;
-  }
-}
-
-@media (min-width: 1025px) and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1025px) and (min-width: 1025px) and (min--moz-device-pixel-ratio: 2), (min-width: 1025px) and (min-width: 1025px) and (min-resolution: 2dppx){
-  .philosophy-bg {
-    background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_desktop_bg@2X.png");
-  }
 }
 
 @media screen and (min-width: 1200px){
@@ -2274,12 +2607,6 @@ footer.footer > svg.footer-icon use {
   }
   .apartment-list {
     gap: 120px;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) and (min--moz-device-pixel-ratio: 2), (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) and (min-resolution: 2dppx){
-  .philosophy-bg {
-    background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_tablet_bg@2X.png");
   }
 }
 
@@ -2313,6 +2640,10 @@ footer.footer > svg.footer-icon use {
   .header .burger {
     margin-left: auto;
   }
+  .header .header-nav {
+    width: 100vw;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767px){
@@ -2321,11 +2652,5 @@ footer.footer > svg.footer-icon use {
   }
   .philosophy-card-content {
     padding-bottom: 22px;
-  }
-}
-
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min--moz-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx){
-  .philosophy-bg {
-    background-image: url("../src/img/philosophy_img's/man.svg"), url("../src/img/philosophy_img's/philosophy_mobile_bg@2X.png");
   }
 }
