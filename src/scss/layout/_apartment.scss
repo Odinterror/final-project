@@ -236,6 +236,18 @@ margin: 0 auto;
     align-items: center;
     justify-content: center;
     text-align: center;
+    opacity: 1;
+    align-self: flex-start;
+  }
+
+  &__content {
+    align-items: flex-start;
+  }
+
+  &__cta.contact-btn {
+    background: #7e6d53;
+    color: #ffffff;
+    border: none;
   }
 
   &.is-open {

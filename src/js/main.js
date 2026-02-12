@@ -98,6 +98,7 @@ if (apartmentModal) {
   const modalRooms = apartmentModal.querySelector("[data-apartment-rooms]");
   const modalPrice = apartmentModal.querySelector("[data-apartment-price]");
   const modalCost = apartmentModal.querySelector("[data-apartment-cost]");
+  const apartmentContactBtn = apartmentModal.querySelector(".apartment-modal__cta");
 
   const openModal = (button) => {
     const img = button.querySelector("img");
@@ -163,6 +164,7 @@ if (apartmentModal) {
 
   closeButton?.addEventListener("click", closeModal);
   overlay?.addEventListener("click", closeModal);
+  apartmentContactBtn?.addEventListener("click", closeModal);
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
