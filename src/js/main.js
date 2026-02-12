@@ -98,6 +98,7 @@ if (apartmentModal) {
   const modalRooms = apartmentModal.querySelector("[data-apartment-rooms]");
   const modalPrice = apartmentModal.querySelector("[data-apartment-price]");
   const modalCost = apartmentModal.querySelector("[data-apartment-cost]");
+  const apartmentContactBtn = apartmentModal.querySelector(".apartment-modal__cta");
 
   const openModal = (button) => {
     const img = button.querySelector("img");
@@ -159,6 +160,56 @@ if (apartmentModal) {
 
   openButtons.forEach((btn) => {
     btn.addEventListener("click", () => openModal(btn));
+  });
+
+  closeButton?.addEventListener("click", closeModal);
+  overlay?.addEventListener("click", closeModal);
+  apartmentContactBtn?.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+}
+
+const catalogModal = document.getElementById("catalog-modal");
+if (catalogModal) {
+  const openButton = document.querySelector(".apartment-download");
+  const closeButton = catalogModal.querySelector(".catalog-modal__close");
+  const overlay = catalogModal.querySelector(".catalog-modal__overlay");
+  const form = catalogModal.querySelector(".catalog-modal__form");
+
+  const resetModal = () => {
+    catalogModal.classList.remove("is-success");
+    form?.reset();
+  };
+
+  const openModal = () => {
+    resetModal();
+    catalogModal.classList.add("is-open");
+    catalogModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  };
+
+  const closeModal = () => {
+    catalogModal.classList.remove("is-open", "is-success");
+    catalogModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  };
+
+  const showSuccess = () => {
+    catalogModal.classList.add("is-success");
+  };
+
+  openButton?.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal();
+  });
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    showSuccess();
   });
 
   closeButton?.addEventListener("click", closeModal);

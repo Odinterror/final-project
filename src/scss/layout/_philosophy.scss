@@ -12,22 +12,13 @@
       url("../src/img/philosophy_img's/man.svg"),
       url("../src/img/philosophy_img's/philosophy_mobile_bg.png");
     background-position:
-      47% 81%,
+      78% 81%,
       45% center;
     background-size:
       clamp(70px, 16vw, 110px) auto,
       cover;
     background-repeat: no-repeat, no-repeat;
     z-index: 1;
-  }
-
-  @media (max-width: 767px) and (min-resolution: 2dppx),
-    (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
-    &-bg {
-      background-image:
-        url("../src/img/philosophy_img's/man.svg"),
-        url("../src/img/philosophy_img's/philosophy_mobile_bg@2X.png");
-    }
   }
 
   &-container {
@@ -120,6 +111,21 @@
     font-weight: 300;
   }
 
+  @media (min-width: 768px) {
+    &-card-content {
+      align-items: center;
+      text-align: center;
+    }
+
+    &-list {
+      justify-items: center;
+    }
+
+    &-item {
+      align-items: center;
+    }
+  }
+
   @media (max-width: 767px) {
     &-card-bg {
       padding-bottom: 4px;
@@ -137,6 +143,9 @@
       background-image:
         url("../src/img/philosophy_img's/man.svg"),
         url("../src/img/philosophy_img's/philosophy_tablet_bg.png");
+      background-position:
+        73% 81%,
+        45% center;
     }
 
     &-card-bg {
@@ -148,7 +157,7 @@
       grid-template-columns: repeat(2, 1fr);
       column-gap: 64px;
       row-gap: 0;
-      align-items: start;
+      align-items: center;
       max-width: 980px;
       margin: 0 auto;
       width: 100%;
@@ -167,26 +176,30 @@
     &-copy {
       grid-column: 2;
       grid-row: 1;
-      margin-top: 30px;
-      margin-bottom: 8px;
+      margin-top: 0;
+      margin-bottom: 0;
+      align-self: center;
     }
 
     &-text2 {
       margin-top: 4px;
     }
+  }
 
-    @media (min-width: 768px) and (max-width: 1024px) and (min-resolution: 2dppx),
-      (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-      &-bg {
-        background-image:
-          url("../src/img/philosophy_img's/man.svg"),
-          url("../src/img/philosophy_img's/philosophy_tablet_bg@2X.png");
-      }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    &-list {
+      margin-top: 0;
+      transform: translateY(56px);
+    }
+
+    &-copy {
+      margin-top: 0;
+      transform: translateY(56px);
     }
   }
 
   /* desktop */
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     &-container {
       margin-left: auto;
       margin-right: auto;
@@ -200,11 +213,15 @@
       background-image:
         url("../src/img/philosophy_img's/man.svg"),
         url("../src/img/philosophy_img's/philosophy_desktop_bg.png");
+      background-position:
+        48% 81%,
+        45% center;
     }
 
     &-list {
       padding-left: 0;
-      margin-top: 50px;
+      margin-top: 0;
+      transform: translateY(5%);
       column-gap: 50px;
       row-gap: 140px;
     }
@@ -220,18 +237,10 @@
     }
 
     &-copy {
-      margin-top: 40px;
+      margin-top: 0;
+      transform: translateY(4%);
       margin-bottom: 0;
       padding-left: 100px;
-    }
-
-    @media (min-width: 1025px) and (min-resolution: 2dppx),
-      (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2) {
-      &-bg {
-        background-image:
-          url("../src/img/philosophy_img's/man.svg"),
-          url("../src/img/philosophy_img's/philosophy_desktop_bg@2X.png");
-      }
     }
   }
 }
