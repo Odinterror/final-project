@@ -126,21 +126,45 @@
             <h2 class="apartament-title">Choose your apartment</h2>
             <ul class="apartment-list">
               <li class="apartment-item">
-                <button class="apartment-btn">
+                <button
+                  class="apartment-btn"
+                  type="button"
+                  data-area="23 meters"
+                  data-rooms="1"
+                  data-price="from 1000 dol/m2"
+                  data-cost="about 50 200 dollars"
+                  data-modal-image="./src/img/house1_modal.png"
+                >
                   <img class="house" src="./src/img/apartament-1.png" alt="" />
                   <h2 class="apartment-subtitle">Type 1</h2>
                   <p class="apartment-text">total area 23 meters</p>
                 </button>
               </li>
               <li class="apartment-item">
-                <button class="apartment-btn">
+                <button
+                  class="apartment-btn"
+                  type="button"
+                  data-area="27 meters"
+                  data-rooms="2"
+                  data-price="from 1000 dol/m2"
+                  data-cost="about 50 200 dollars"
+                  data-modal-image="./src/img/house2_modal.png"
+                >
                   <img class="house" src="./src/img/apartament-2.png" alt="" />
                   <h2 class="apartment-subtitle">Type 2</h2>
                   <p class="apartment-text">total area 27 meters</p>
                 </button>
               </li>
               <li class="apartment-item">
-                <button class="apartment-btn">
+                <button
+                  class="apartment-btn"
+                  type="button"
+                  data-area="31 meters"
+                  data-rooms="3"
+                  data-price="from 1000 dol/m2"
+                  data-cost="about 50 200 dollars"
+                  data-modal-image="./src/img/house3_modal.png"
+                >
                   <img class="house" src="./src/img/apartament-3.png" alt="" />
                   <h2 class="apartment-subtitle">Type 3</h2>
                   <p class="apartment-text">total area 31 meters</p>
@@ -150,6 +174,60 @@
           </div>
           <button class="apartment-download">Download catalog</button>
         </section>
+        <div class="apartment-modal" id="apartment-modal" aria-hidden="true">
+          <div class="apartment-modal__overlay"></div>
+          <div
+            class="apartment-modal__panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="apartment-modal-title"
+          >
+            <button
+              class="apartment-modal__close"
+              type="button"
+              aria-label="Close"
+            >
+              <img src="./src/img/cross_contact.svg" alt="" />
+            </button>
+            <h3 class="apartment-modal__title" id="apartment-modal-title">
+              House 1
+            </h3>
+            <div class="apartment-modal__body">
+              <div class="apartment-modal__media">
+                <img
+                  class="apartment-modal__image"
+                  src="./src/img/house1_modal.png"
+                  alt="Apartment"
+                />
+              </div>
+              <div class="apartment-modal__content">
+                <p class="apartment-modal__meta">
+                  <span class="apartment-modal__label">Total area:</span>
+                  <span
+                    class="apartment-modal__value apartment-modal__value--accent"
+                    data-apartment-area
+                    >50.2 m2</span
+                  >
+                </p>
+                <p class="apartment-modal__meta">
+                  <span class="apartment-modal__label">Rooms:</span>
+                  <span class="apartment-modal__value" data-apartment-rooms
+                    >2</span
+                  >
+                </p>
+                <p class="apartment-modal__meta apartment-modal__meta--accent" data-apartment-price>
+                  from 1000 dol/m2
+                </p>
+                <p class="apartment-modal__meta apartment-modal__meta--muted" data-apartment-cost>
+                  about 50 200 dollars
+                </p>
+                <button class="apartment-modal__cta" type="button">
+                  Contact us
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="infrastructure">
           <div class="infrastructure-container">
             <div class="infrastructure-bg">
@@ -282,69 +360,6 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
-        <svg class="footer-icon" width="56" height="56">
-          <use href="./src/img/NICE_VIEW.svg"></use>
-        </svg>
-        <div class="footer-item">
-          <ul class="footer-navigation">
-            <li class="footer-navigation-title">
-              <h2>Navigation</h2>
-            </li>
-            <li class="footer navigation-item">
-              <a href="">Home</a>
-            </li>
-            <li class="footer navigation-item">
-              <a href="">About</a>
-            </li>
-            <li class="footer navigation-item">
-              <a href="">Apartments</a>
-            </li>
-            <li class="footer navigation-item">
-              <a href="">Infrastructure</a>
-            </li>
-            <li class="footer navigation-item">
-              <a href="">Gallery</a>
-            </li>
-          </ul>
-          <ul class="footer-contacts">
-            <li class="footer-contacts-title">
-              <h2>Contacts</h2>
-            </li>
-            <li class="footer-contacts-item">
-              <p>(406) 555-0120</p>
-            </li>
-            <li class="footer-contacts-item">
-              <p>ul. Chodkiewicza Karola 111, Chorzów</p>
-            </li>
-            <li class="footer-contacts-item">
-              <p>deanna.curtis@example.com</p>
-            </li>
-          </ul>
-          <ul class="footer-icon-list">
-            <li class="footer-icon">
-              <svg class="footer-icon" width="0" height="0">
-                <use href="./src/img/youtube.svg"></use>
-              </svg>
-            </li>
-            <li class="footer-icon">
-              <svg class="footer-icon" width="0" height="0">
-                <use href="./src/img/istagram.svg"></use>
-              </svg>
-            </li>
-            <li class="footer-icon">
-              <svg class="footer-icon" width="0" height="0">
-                <use href="./src/img/twitter.svg"></use>
-              </svg>
-            </li>
-            <li class="footer-icon">
-              <svg class="footer-icon" width="0" height="0">
-                <use href="./src/img/facebook.svg"></use>
-              </svg>
-            </li>
-          </ul>
-        </div>
-      </section>
       <div class="contact-modal" id="contact-modal" aria-hidden="true">
         <div class="contact-modal__overlay"></div>
         <div
@@ -389,66 +404,68 @@
           </form>
         </div>
       </div>
-    </main>
-    <footer class="footer">
-      <img class="logo" src="" alt="" />
-      <h2 class="navigation-title">Navigation</h2>
-      <ul class="navigation">
-        <li class="navigation-item">
-          <a href="">Home</a>
-        </li>
-        <li class="navigation-item">
-          <a href="">About</a>
-        </li>
-        <li class="navigation-item">
-          <a href="">Apartments</a>
-        </li>
-        <li class="navigation-item">
-          <a href="">Infrastructure</a>
-        </li>
-        <li class="navigation-item">
-          <a href="">Gallery</a>
-        </li>
-      </ul>
-      <h2 class="footer-contacts-title">Contacts</h2>
-      <ul class="footer-contacts">
-        <li class="footer-contacts-item">
-          <p>(406) 555-0120</p>
-        </li>
-        <li class="footer-contacts-item">
-          <p>ul. Chodkiewicza Karola 111, Chorzów</p>
-        </li>
-        <li class="footer-contacts-item">
-          <p>deanna.curtis@example.com</p>
-        </li>
-      </ul>
-      <ul class="footer-icon-list">
-        <li class="footer-icon">
-          <svg class="footer-icon" width="0" height="0">
-            <use href=""></use>
-          </svg>
-        </li>
-        <li class="footer-icon">
-          <svg class="footer-icon" width="0" height="0">
-            <use href=""></use>
-          </svg>
-        </li>
-        <li class="footer-icon">
-          <svg class="footer-icon" width="0" height="0">
-            <use href=""></use>
-          </svg>
-        </li>
-        <li class="footer-icon">
-          <svg class="footer-icon" width="0" height="0">
-            <use href=""></use>
-          </svg>
-        </li>
-      </ul>
-      <p class="footer-text">
-        By using this website, you agree to the Terms of Service and Privacy
-        Policy
-      </p>
-    </footer>
+      <footer class="footer">
+        <svg class="footer-icon" width="56" height="56">
+          <use href="./src/img/NICE_VIEW.svg"></use>
+        </svg>
+        <div class="footer-item">
+          <ul class="footer-navigation">
+            <li class="footer-navigation-title">
+              <h2>Navigation</h2>
+            </li>
+            <li class="navigation-item">
+              <a href="">Home</a>
+            </li>
+            <li class="navigation-item">
+              <a href="">About</a>
+            </li>
+            <li class="navigation-item">
+              <a href="">Apartments</a>
+            </li>
+            <li class="navigation-item">
+              <a href="">Infrastructure</a>
+            </li>
+            <li class="navigation-item">
+              <a href="">Gallery</a>
+            </li>
+          </ul>
+          <ul class="footer-contacts">
+            <li class="footer-contacts-title">
+              <h2>Contacts</h2>
+            </li>
+            <li class="footer-contacts-item">
+              <p>(406) 555-0120</p>
+            </li>
+            <li class="footer-contacts-item">
+              <p>ul. Chodkiewicza Karola 111, Chorz??w</p>
+            </li>
+            <li class="footer-contacts-item">
+              <p>deanna.curtis@example.com</p>
+            </li>
+          </ul>
+          <ul class="footer-icon-list">
+            <li class="footer-icon">
+              <svg class="footer-icon" width="0" height="0">
+                <use href="./src/img/youtube.svg"></use>
+              </svg>
+            </li>
+            <li class="footer-icon">
+              <svg class="footer-icon" width="0" height="0">
+                <use href="./src/img/istagram.svg"></use>
+              </svg>
+            </li>
+            <li class="footer-icon">
+              <svg class="footer-icon" width="0" height="0">
+                <use href="./src/img/twitter.svg"></use>
+              </svg>
+            </li>
+            <li class="footer-icon">
+              <svg class="footer-icon" width="0" height="0">
+                <use href="./src/img/facebook.svg"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
         <p class="footer-text">
           By using this website, you agree to the Terms of Service and Privacy
           Policy

@@ -1,12 +1,12 @@
 .contact {
-  padding: 60px 0 70px;
+  padding: clamp(60px, 10vw, 70px) 0 clamp(70px, 11vw, 80px);
   background: #f1ede7;
   text-align: center;
 
   &-title {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: 28px;
+    font-size: clamp(28px, 4.5vw, 30px);
     color: #6b5e4e;
     margin-bottom: 6px;
   }
@@ -16,7 +16,7 @@
     font-weight: 300;
     font-size: 16px;
     color: #8a7b6a;
-    margin-bottom: 20px;
+    margin-bottom: clamp(20px, 4vw, 22px);
   }
 
   &-wrap {
@@ -25,10 +25,10 @@
   }
 
   &-list {
-    width: min(320px, 90%);
+    width: clamp(288px, 92vw, 704px);
     background: #7e6d53;
     border-radius: 16px;
-    padding: 20px 18px;
+    padding: clamp(20px, 4vw, 28px) clamp(18px, 5vw, 34px);
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -56,8 +56,10 @@
     color: #6b5e4e;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 14px;
-    padding: 12px 16px;
+    font-size: clamp(14px, 3vw, 20px);
+    padding: clamp(12px, 3vw, 16px) clamp(16px, 4vw, 30px);
+    min-width: clamp(150px, 40vw, 210px);
+    height: clamp(44px, 9vw, 56px);
     border-radius: 10px;
     text-align: center;
   }
@@ -71,20 +73,8 @@
   @media (min-width: 768px) {
     padding: 70px 0 80px;
 
-    &-title {
-      font-size: 30px;
-      margin-bottom: 4px;
-    }
-
-    &-subtitle {
-      font-size: 15px;
-      margin-bottom: 22px;
-    }
-
     &-list {
-      width: min(704px, 92%);
       min-height: 226px;
-      padding: 28px 34px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 24px;
@@ -97,21 +87,12 @@
       padding-left: 18px;
     }
 
-    &-text {
-      font-size: 13px;
-    }
-
     &-btn {
       grid-column: 2;
       grid-row: 1 / span 3;
       align-self: center;
       justify-self: center;
       margin-top: 0;
-      min-width: 210px;
-      height: 56px;
-      padding: 16px 30px;
-      font-size: 20px;
-      border-radius: 8px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
