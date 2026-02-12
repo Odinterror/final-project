@@ -104,6 +104,13 @@ footer.footer {
     font-size: 11px;
     color: #bdb3a3;
   }
+
+  .footer-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    color: #ffffff;
+  }
 }
 
 footer.footer > svg.footer-icon {
